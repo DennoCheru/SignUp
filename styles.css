@@ -38,8 +38,13 @@ body {
   line-height: 1.5;
   /* 5. Improve text rendering */
   -webkit-font-smoothing: antialiased;
-  max-width: 80%;
+  margin: 0;
   background-color: gray;
+  font-family: "Rubik", system-ui, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
 /* 6. Improve media defaults */
@@ -71,4 +76,52 @@ h1, h2, h3, h4, h5, h6 {
 */
 #root, #__next {
   isolation: isolate;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    width: 80%;
+    height: 80vh;
+    margin-left: auto;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.image-sidebar {
+    position: relative;
+    width: 40%;
+    background: url("./images/bg.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.main {
+    width: 60%;
+}
+
+.image-sidebar .logo-container{
+    position: absolute;
+    top: 20%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-family: "Norse";
+    font-size: 36px;
+    width: 100%;
+}
+
+.logo-container > img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.image-sidebar .credit {
+    position: absolute;
+    left: 15%;
+    bottom: 20px;
+    color: white;
 }
