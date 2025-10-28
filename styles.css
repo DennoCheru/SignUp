@@ -41,6 +41,7 @@ body {
   margin: 0;
   background: linear-gradient(to right, #d7481d, #e18240, #fdebb4);
   font-family: "Rubik", system-ui, sans-serif;
+  font-size: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -141,4 +142,47 @@ h1, h2, h3, h4, h5, h6 {
 .main .row {
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
+}
+
+form {
+    margin: 0 auto;
+    padding: 1em;
+    box-sizing: border-box;
+}
+
+fieldset{
+ border: none;
+}
+
+legend {
+    font-size: 1.2rem;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.row > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+label {
+    font-size: 0.8em;
+    text-transform: uppercase;
+}
+
+input {
+    appearance: none;
+    font-family: inherit;
+    font-size: 1rem;
+
+    padding: 0.5rem;
+    margin: 0;
+    box-sizing: border-box;
+    width: 90%;
+    border-radius: 8px;
 }
