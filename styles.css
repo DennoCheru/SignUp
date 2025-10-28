@@ -79,7 +79,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-    color: #064c34;
+    color: #d04525;
 }
 
 /*
@@ -92,9 +92,10 @@ a {
 .container {
     display: flex;
     flex-direction: row;
+    align-content: space-between;
     gap: 1rem;
     width: 80%;
-    height: 80vh;
+    height: 90vh;
     margin-left: auto;
     border-radius: 10px;
     overflow: hidden;
@@ -103,7 +104,7 @@ a {
 .image-sidebar {
     position: relative;
     width: 40%;
-    background: url("./images/bg.jpg") no-repeat center;
+    background: url("./images/bg.jpg");
     background-size: cover;
 }
 
@@ -116,7 +117,7 @@ a {
     align-items: center;
     justify-content: center;
     background-color: rgba(0, 0, 0, 0.6);
-    color: white;
+    color: var(--font-color);
     font-family: "Norse";
     font-size: 36px;
     width: 100%;
@@ -140,7 +141,7 @@ a {
 
     border-radius: 10px;
     color: var(--font-color);
-    background-color: #d04525;
+    background-color: #064c34 ;
 
     display: flex;
     flex-direction: column;
@@ -156,17 +157,13 @@ a {
 }
 
 form {
-    margin: 0 auto;
-    padding: 1em;
+    margin: 0;
+    padding: 1rem;
     box-sizing: border-box;
 }
 
-fieldset{
- border: none;
-}
-
-legend {
-    font-size: 1.2rem;
+.controls {
+    padding: 1rem;
 }
 
 .row {
@@ -201,17 +198,56 @@ input {
     background-color: rgba(255, 255, 255, 0);
 }
 
-input:active {
-    background-color: rgba(0, 0, 0, 0);
+input:focus {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+input:valid {
+    background-color: rgba(0, 128, 0, 0.1);
+}
+
+input:invalid {
+    border: 1px solid red;
+    background-color: rgba(255, 0, 0, 0.4);
+}
+
+input + span {
+    position: relative;
+}
+
+input:invalid + span::after {
+    font-size: 0.7rem;
+    position: absolute;
+    content: "Password must contain 1 uppercase, 1 number, and 1 special character.";
+    color: var(--font-color);
+    padding: 5px 10px;
+    bottom: -60px;
+    left: 0px;
+}
+input + span::before {
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+}
+
+input:invalid + span::before {
+    content: "✖";
+    color: red;
+}
+
+input:valid + span::before {
+    content: "✓";
+    color: green;
 }
 
 button {
+    margin-top: 2.3rem;
     width: 48%;
     font-size: 1rem;
     font-weight: bold;
 
     color: var(--font-color);
-    background-color: #064c34;
+    background-color: #d04525;
 
     border: none;
     border-radius: 5px;
@@ -221,5 +257,5 @@ button {
 }
 
 button:hover {
-    background-color: #03261a;
+    background-color: #d04525;
 }

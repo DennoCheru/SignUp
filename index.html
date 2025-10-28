@@ -16,12 +16,13 @@
             <p class="credit">Photo by <a href="https://unsplash.com/@freddieaddery?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Freddie Addery</a> on <a href="https://unsplash.com/photos/guinea-pig-on-head-sunflower-in-front-of-face-HyOJoOzMvlc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
         </div>
         <div class="main">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi rerum quam pariatur nostrum, officiis fuga, iusto numquam ea corporis nulla tenetur cupiditate fugiat accusamus id? Amet cum veniam sunt a.</p>
-            <p>You know you want to</p>
+            <h1>This is not a real online service!</h1>
+            <p>You know you want something like this is your life to help you realize your wildest dreams. Sign up now to get started</p>
+            <p><em>You know you want to</em></p>
 
             <form action="">
                 <h2 class="title">Let's do this</h2>
-                <div>
+                <div class="controls">
                     <div class="row">
                         <div>
                             <label for="first_name">First Name</label>
@@ -45,11 +46,12 @@
                     <div class="row">
                         <div>
                             <label for="password">Password</label>
-                            <input type="password" id="password" name="password">
+                            <input type="password" id="password" name="password" pattern="(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9]).{8,}">
+                            <span></span>
                         </div>
                         <div>
                             <label for="password">Confirm Password</label>
-                            <input type="password" id="confirm_password" name="confirm_password">
+                            <input type="password" id="confirm_password" name="confirm_password" pattern="(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9]).{8,}">
                         </div>
                     </div>
                 </div>
