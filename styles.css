@@ -39,7 +39,7 @@ body {
   /* 5. Improve text rendering */
   -webkit-font-smoothing: antialiased;
   margin: 0;
-  background-color: gray;
+  background: linear-gradient(to right, #d7481d, #e18240, #fdebb4);
   font-family: "Rubik", system-ui, sans-serif;
   display: flex;
   align-items: center;
@@ -96,9 +96,6 @@ h1, h2, h3, h4, h5, h6 {
     background-size: cover;
 }
 
-.main {
-    width: 60%;
-}
 
 .image-sidebar .logo-container{
     position: absolute;
@@ -124,4 +121,24 @@ h1, h2, h3, h4, h5, h6 {
     left: 15%;
     bottom: 20px;
     color: white;
+}
+
+.main {
+    width: 60%;
+    padding: 1rem;
+
+    border-radius: 10px;
+    color: white;
+    background-color: #d04525;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1rem;
+    
+}
+
+.main .row {
+    display: flex;
+    flex-direction: row;
 }
