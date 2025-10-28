@@ -95,7 +95,7 @@ a {
     align-content: space-between;
     gap: 1rem;
     width: 80%;
-    height: 90vh;
+    height: 95vh;
     margin-left: auto;
     border-radius: 10px;
     overflow: hidden;
@@ -242,6 +242,7 @@ input:valid + span::before {
 
 button {
     margin-top: 2.3rem;
+    margin-left: auto;
     width: 48%;
     font-size: 1rem;
     font-weight: bold;
